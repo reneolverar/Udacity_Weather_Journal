@@ -7,7 +7,6 @@ body{
     display: grid;
     grid-auto-rows: minmax(150px, auto);
     /* grid-template-columns:  */
-    height:100vh;
     background: #f23557;
     color: #f0d43a;
     justify-content: center;
@@ -49,14 +48,14 @@ body{
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label{
-    display:block;
+    display: block;
     font-size: 27px;
 }
 
 input{
-    display:block;
+    display: block;
     height: 60px;
-    width: 320px;
+    width: 400px;
     background:#22b2da;
     color: #f0d43a;
     font-size: 20px;
@@ -65,6 +64,8 @@ input{
 }
 
 button{
+    display: block;
+    margin: 10px 3px;
     width: 400px;
     height: 100px;
     background: #3b4a6b;
@@ -79,7 +80,9 @@ h1{
 }
 
 textarea{
+    display: block;
     background:#22b2da;
+    width: 400px;
     color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;

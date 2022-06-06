@@ -1,7 +1,6 @@
 // Server side code - Udacity project weather journal app
 /* Empty JS object to act as endpoint for all routes */
 projectData = {};
-projectData.journal = [];
 
 // Express to run server and routes
 const express = require('express');
@@ -48,22 +47,14 @@ function addWeatherData(req, res){
         city: req.body.city,
         country: req.body.country
     };
-    projectData.journal.push(newEntry);
-    res.send(projectData.journal);
-    console.log(projectData.journal);
-    console.log(projectData.journal);
-}
-
-// GET route for journalData
-app.get('/journalData', getData)
-function getData(req, res) {
-    res.send(projectData.journal)
-    console.log(projectData.journal)
+    Object.assign(projectData, newEntry);
+    res.send(projectData);
+    console.log(projectData);
 }
 
 // GET route for projectData
-app.get('/all', getJournalData)
-function getJournalData(req, res) {
+app.get('/all', getProjectData)
+function getProjectData(req, res) {
     res.send(projectData)
     console.log(projectData)
 }
